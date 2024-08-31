@@ -110,7 +110,7 @@ st.write("Provinsi yang tersedia:")
 
 # Menampilkan daftar nama provinsi yang tersedia dalam bentuk tabel
 st.write("Provinsi yang tersedia:")
-img = plt.imread(r'C:\Users\VivoBooK\Downloads\Telegram Desktop\FIX\FIX\tes.png')
+img = plt.imread('tes.png')
 
 # Tampilkan gambar menggunakan st.image()
 st.image(img, caption='Provinsi Indonesia', use_column_width=True)
