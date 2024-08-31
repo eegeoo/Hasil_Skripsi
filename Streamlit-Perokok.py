@@ -107,9 +107,6 @@ def analisis_provinsi_lstm(nama_provinsi, units=50, batch_size=8, epochs=50):
 # Streamlit UI
 st.title("Analisis Jumlah Perokok Di Indonesia")
 st.write("Provinsi yang tersedia:")
-
-# Menampilkan daftar nama provinsi yang tersedia dalam bentuk tabel
-st.write("Provinsi yang tersedia:")
 img = plt.imread('tes.png')
 
 # Tampilkan gambar menggunakan st.image()
