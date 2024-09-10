@@ -15,7 +15,7 @@ tf.random.set_seed(42)
 # Load dataset
 df = pd.read_csv('dataperokok.csv')
 
-def build_lstm_model(input_shape, units=50):
+def build_lstm_model(input_shape, units=10):
     model = Sequential()
     model.add(Input(shape=input_shape))
     model.add(LSTM(units=units))
@@ -23,7 +23,7 @@ def build_lstm_model(input_shape, units=50):
     model.compile(optimizer='adam', loss='mean_squared_error')
     return model
 
-def analisis_provinsi_lstm(nama_provinsi, units=50, batch_size=8, epochs=50):
+def analisis_provinsi_lstm(nama_provinsi, units=10, batch_size=4, epochs=30):
     try:
         # Filter data berdasarkan nama provinsi
         data_provinsi = df[df['38 Provinsi'].str.lower() == nama_provinsi.lower()].iloc[0]
