@@ -116,7 +116,7 @@ nama_provinsi = st.selectbox("Pilih Provinsi:", df['38 Provinsi'].unique())
 if st.button("Tampilkan Hasil"):
     hasil = analisis_provinsi_lstm(nama_provinsi)
     if hasil:
-        st.write(f"MAPE 2023: {hasil['mape_2023']:.2f}%")
+        st.write(f"MAPE 2023: {hasil['mape_2023'] * 100:.2f} %")
         st.write(f"MAE 2023: {hasil['mae_2023']:.2f}%")
         st.write(f"Prediksi 2023: {hasil['prediksi_2023']:.2f}%")
         st.write(f"Nilai Aktual 2023: {hasil['y_true_2023']:.2f}%")
